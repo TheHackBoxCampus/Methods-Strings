@@ -1,10 +1,11 @@
 let string = "Hello world!";
 
 const TypeOfMethods = (str) => {
-    return str.concat(" yess"); 
-    /*se utiliza para fusionar dos o más matrices. 
-    Este método no cambia las matrices existentes, 
-    sino que devuelve una nueva matriz.*/
+    return str.indexOf("H"); 
+    /* retorna el primer índice en el que 
+    se puede encontrar un elemento dado en 
+    el array, ó retorna -1 si el elemento 
+    no esta presente.*/
 } 
 
 console.log(TypeOfMethods(string)); 
