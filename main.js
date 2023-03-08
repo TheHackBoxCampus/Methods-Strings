@@ -1,11 +1,11 @@
 let string = "Hello world!";
 
 const TypeOfMethods = (str) => {
-    return str.padEnd(20, "-"); 
-    /*rellena la cadena actual con una 
-    cadena determinada (repetida, si es 
-    necesario) para que la cadena resultante 
-    alcance una longitud determinada. */
+    return str.padStart(19, "miller,"); 
+    /*rellena la cadena actual con otra 
+    cadena (varias veces, si es necesario) 
+    hasta que la cadena resultante alcanza 
+    la longitud dada*/
 } 
 
 console.log(TypeOfMethods(string)); 
