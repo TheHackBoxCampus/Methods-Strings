@@ -1,11 +1,11 @@
 let string = "Hello world!";
 
 const TypeOfMethods = (str) => {
-    return str.padStart(19, "miller,"); 
-    /*rellena la cadena actual con otra 
-    cadena (varias veces, si es necesario) 
-    hasta que la cadena resultante alcanza 
-    la longitud dada*/
+    return str.substr(1,2); 
+    /* devuelve una parte de la cadena, 
+    comenzando en el índice especificado 
+    y extendiéndose por un número determinado 
+    de caracteres */
 } 
 
 console.log(TypeOfMethods(string)); 
