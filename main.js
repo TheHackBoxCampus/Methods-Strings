@@ -1,13 +1,13 @@
 let string = "Hello world!";
 
-const TypeOfMethods = () => {
-    return String.fromCharCode(100)
-    /*devuelve una cadena creada a partir de 
-    la secuencia especificada de unidades de 
-    código UTF-16.*/
+const TypeOfMethods = (str) => {
+    return str.concat(" yess"); 
+    /*se utiliza para fusionar dos o más matrices. 
+    Este método no cambia las matrices existentes, 
+    sino que devuelve una nueva matriz.*/
 } 
 
-console.log(TypeOfMethods()); 
+console.log(TypeOfMethods(string)); 
 
 
 
