@@ -1,8 +1,8 @@
 let string = "   hello world!   ";
 
 const TypeOfMethods = (str) => {
-    return str.trim(); 
-    /*quitar espacio de principio/fin*/
+    return str.trimStart(); 
+    /*quita el espacio del principio */
 } 
 
 console.log(TypeOfMethods(string)); 
