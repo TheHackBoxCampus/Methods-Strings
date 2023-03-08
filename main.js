@@ -1,10 +1,8 @@
 let string = "Hello world!";
 
 const TypeOfMethods = (str) => {
-    return str.slice(2,7) 
-    /*Extrae una sección de una cadena y 
-    devuelve una nueva cadena.*/
-
+    return str.substring(2,6) 
+    /*Devuelve un subconjunto de un objeto String.*/
 } 
 
 console.log(TypeOfMethods(string)); 
