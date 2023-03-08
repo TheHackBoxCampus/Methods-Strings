@@ -1,8 +1,8 @@
-let string = "HELLO WORLD!";
+let string = "hello world!";
 
 const TypeOfMethods = (str) => {
-    return str.toLowerCase(); 
-    /* Tranforma la cadena en miniscula*/
+    return str.toUpperCase(); 
+    /* Tranforma la cadena en mayuscula*/
 } 
 
 console.log(TypeOfMethods(string)); 
