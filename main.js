@@ -1,10 +1,10 @@
-let string = "   hello world!   ";
+let string = "hello world!";
 
-const TypeOfMethods = (str) => {
-    return str.trimEnd(); 
-    /*quita el espacio del final */
+const TypeOfMethods = () => {
+    return String.raw`Hi\u000A!`; 
+    /*Es una función de plantilla de literales*/
 } 
 
-console.log(TypeOfMethods(string)); 
+console.log(TypeOfMethods()); 
 
 
