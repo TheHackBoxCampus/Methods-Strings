@@ -1,11 +1,8 @@
-let string = "Hello world!";
+let string = "HELLO WORLD!";
 
 const TypeOfMethods = (str) => {
-    return str.split(" "); 
-    /* divide un objeto de tipo String 
-    en un array (vector) de cadenas 
-    mediante la separación de la cadena 
-    en subcadenas*/
+    return str.toLowerCase(); 
+    /* Tranforma la cadena en miniscula*/
 } 
 
 console.log(TypeOfMethods(string)); 
