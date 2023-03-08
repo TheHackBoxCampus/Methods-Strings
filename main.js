@@ -1,8 +1,8 @@
 let string = "Hello world!";
 
 const TypeOfMethods = (str) => {
-    return str.startsWith("F") 
-    /*Verifica si la cadena inicia con el 
+    return str.endsWith("!") 
+    /*Verifica si la cadena termina con el 
     parametro especificado */
 } 
 
