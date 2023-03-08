@@ -1,9 +1,10 @@
 let string = "Hello world!";
 
 const TypeOfMethods = (str) => {
-    return str.length
-    /*En realidad lenght es una propiedad, y retorna
-    el numero de caracteres que tiene la cadena*/
+    return str.charAt(3)
+    /*Retorna la posicion del caracter 
+    dentro de la cadena, iniciando desde
+    0*/
 } 
 
 console.log(TypeOfMethods(string)); 
