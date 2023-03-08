@@ -1,10 +1,9 @@
-let string = "hello world!";
-
-const TypeOfMethods = () => {
-    return String.raw`Hi\u000A!`; 
-    /*Es una función de plantilla de literales*/
+// Operadores aritméticos binarios
+const arithmeticOperators = (num, num2) => {
+    return num + num2; 
+    /*Operador de suma*/
 } 
 
-console.log(TypeOfMethods()); 
+console.log(arithmeticOperators(5,4)); 
 
 
