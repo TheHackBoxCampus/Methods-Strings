@@ -1,7 +1,8 @@
 // operadores aritméticos unarios 
 const arithmeticOperators = (num) => {
-    return num++; 
-    /*Operador unario de incremento*/
+     num--;
+     return num; 
+     /*Operador unario de decremento*/
 } 
 
 console.log(arithmeticOperators(20)); 
