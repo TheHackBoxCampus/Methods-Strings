@@ -1,11 +1,12 @@
 let string = "Hello world!";
 
 const TypeOfMethods = (str) => {
-    return str.indexOf("H"); 
-    /* retorna el primer índice en el que 
-    se puede encontrar un elemento dado en 
-    el array, ó retorna -1 si el elemento 
-    no esta presente.*/
+    return str.lastIndexOf("o"); 
+    /*dado un argumento: una subcadena 
+    para buscar, busca en toda la cadena 
+    de llamada y devuelve el índice de 
+    la última aparición de la subcadena 
+    especificada*/
 } 
 
 console.log(TypeOfMethods(string)); 
