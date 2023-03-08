@@ -1,10 +1,10 @@
 let string = "Hello world!";
 
 const TypeOfMethods = (str) => {
-    return str.charCodeAt(4)
-    /*devuelve un número entero entre 0 y 65535 
-    que representa la unidad de código UTF-16 en 
-    el índice dado.*/
+    return str.codePointAt(5)
+    /*devuelve un número entero no negativo
+     que es el valor del punto de código 
+     Unicode en la posición dada*/
 } 
 
 console.log(TypeOfMethods(string)); 
