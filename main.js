@@ -1,12 +1,13 @@
-let string = "\u0041\u006d\u00e9\u006c\u0069\u0065";
+let string = "Hello world!";
 
 const TypeOfMethods = (str) => {
-    return str.normalize("NFC"); 
-    /*devuelve la forma de normalización 
-    Unicode de la cadena..*/
+    return str.padEnd(20, "-"); 
+    /*rellena la cadena actual con una 
+    cadena determinada (repetida, si es 
+    necesario) para que la cadena resultante 
+    alcance una longitud determinada. */
 } 
 
 console.log(TypeOfMethods(string)); 
-
 
 
