@@ -1,9 +1,9 @@
 let string = "Hello world!";
 
 const TypeOfMethods = (str) => {
-    return str.includes("o"); 
-    /* Busca dentro del string y verifica si el 
-	 parametro existe dentro */
+    return str.startsWith("F") 
+    /*Verifica si la cadena inicia con el 
+    parametro especificado */
 } 
 
 console.log(TypeOfMethods(string)); 
