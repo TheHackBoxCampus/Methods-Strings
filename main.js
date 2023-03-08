@@ -1,5 +1,5 @@
 // operadores aritmeticos, OBJETO MATH
-const aritmethicOperators = (num) => Math.round(num);
-/*Devuelve el entero más cercano*/
-console.log(aritmethicOperators(10.55)); 
+const aritmethicOperators = (num) => Math.sqrt(num);
+/*Retorna la raiz cuadrada del numero que se pasa como parametro*/
+console.log(aritmethicOperators(16)); 
 
