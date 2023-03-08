@@ -1,15 +1,12 @@
-let string = "Hello world!";
-let char = "a"
+let string = "\u0041\u006d\u00e9\u006c\u0069\u0065";
 
-const TypeOfMethods = (chr, con) => {
-    return chr.localeCompare(con); 
-    /*devuelve un número que indica si 
-    una cadena de referencia viene antes 
-    o después, o si es la misma que la 
-    cadena dada en el orden de clasificación..*/
+const TypeOfMethods = (str) => {
+    return str.normalize("NFC"); 
+    /*devuelve la forma de normalización 
+    Unicode de la cadena..*/
 } 
 
-console.log(TypeOfMethods(char, "c")); 
+console.log(TypeOfMethods(string)); 
 
 
 
