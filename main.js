@@ -1,8 +1,8 @@
-let string = "hello world!";
+let string = "   hello world!   ";
 
 const TypeOfMethods = (str) => {
-    return str.toUpperCase(); 
-    /* Tranforma la cadena en mayuscula*/
+    return str.trim(); 
+    /*quitar espacio de principio/fin*/
 } 
 
 console.log(TypeOfMethods(string)); 
