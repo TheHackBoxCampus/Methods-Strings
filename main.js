@@ -1,5 +1,5 @@
 // Mas metodos del Objeto MATH
-const aritmethicOperators = (num) => Math.exp(num);
-/*Exponenciación. Devuelve el número e elevado a x. e²*/
-console.log(aritmethicOperators(2)); 
+const aritmethicOperators = (num) => Math.cbrt(num);
+/*Devuelve la raíz cúbica de x.*/
+console.log(aritmethicOperators(27)); 
 
