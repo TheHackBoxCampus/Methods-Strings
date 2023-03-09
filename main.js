@@ -1,8 +1,5 @@
-// operadores logico,  NOT
-const logicOperators = (logic) => !logic;
-/* El operador acepta un solo argumento y realiza lo siguiente:
-    - Convierte el operando al tipo booleano: true/false. 
-    - Retorna el valor contrario.
-*/
-console.log(logicOperators(true)); 
+// operadores logico, XOR
+const logicOperators = (logic, logic2) => logic ^ logic2;
+/* Devuelve 1 si ambos operandos son diferentes.*/
+console.log(logicOperators(true, false)); 
 
