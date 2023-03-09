@@ -1,5 +1,5 @@
 // Mas metodos del Objeto MATH
-const aritmethicOperators = (num) => Math.floor(num);
-/*Devuelve x con redondeo inferior (el entero más bajo)*/
-console.log(aritmethicOperators(100.234312)); 
+const aritmethicOperators = (num) => Math.ceil(num);
+/*Devuelve x con redondeo superior (el entero más alto)*/
+console.log(aritmethicOperators(201.234312)); 
 
