@@ -1,5 +1,5 @@
 // Mas metodos del Objeto MATH
-const aritmethicOperators = (num) => Math.cos(num);
-/*Devuelve el coseno de x*/
-console.log(aritmethicOperators(40)); 
+const aritmethicOperators = (a,b) => Math.imul(a,b);
+/*Equivalente a a * b, pero a nivel de bits.*/
+console.log(aritmethicOperators(40, 0xffffffff));  // -40
 
