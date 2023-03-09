@@ -1,5 +1,5 @@
 // Mas metodos del Objeto MATH
-const aritmethicOperators = (num) => Math.fround(num);
-/*Devuelve x con redondeo (flotante con precisión simple)*/
-console.log(aritmethicOperators(323.234312)); 
+const aritmethicOperators = (num) => Math.trunc(num);
+/*Trunca el número x (devuelve sólo la parte entera)*/
+console.log(aritmethicOperators(129.23)); 
 
