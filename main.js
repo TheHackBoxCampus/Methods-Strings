@@ -1,5 +1,5 @@
-// operadores logico, XOR
-const logicOperators = (logic, logic2) => logic ^ logic2;
-/* Devuelve 1 si ambos operandos son diferentes.*/
-console.log(logicOperators(true, false)); 
+// Mas metodos del Objeto MATH
+const aritmethicOperators = (num) => Math.floor(num);
+/*Devuelve x con redondeo inferior (el entero más bajo)*/
+console.log(aritmethicOperators(100.234312)); 
 
