@@ -1,6 +1,8 @@
-// operadores logico,  AND
-const logicOperators = (logic1, logic2) => logic1 && logic2;
-/* retorna true si ambos operandos son valores verdaderos y 
-false en cualquier otro caso.*/
-console.log(logicOperators(true, false)); 
+// operadores logico,  NOT
+const logicOperators = (logic) => !logic;
+/* El operador acepta un solo argumento y realiza lo siguiente:
+    - Convierte el operando al tipo booleano: true/false. 
+    - Retorna el valor contrario.
+*/
+console.log(logicOperators(true)); 
 
