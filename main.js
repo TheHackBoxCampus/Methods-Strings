@@ -1,5 +1,5 @@
-// Mas metodos del Objeto MATH
-const aritmethicOperators = (x) => Math.log(x);
-/*Devuelve el logaritmo natural en base e de x.*/
-console.log(aritmethicOperators(0xffffffff));  
+// Objeto "Object" = .fromEntries
+const ObjectProperty = (obj) => Object.fromEntries(obj);
+/*transforma una lista de pares clave-valor en un objeto.*/
+console.log( ObjectProperty([["Mar",2],["Lu", 1]]));  
 
