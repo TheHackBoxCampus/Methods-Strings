@@ -1,5 +1,11 @@
 // Objeto "Object" = .fromEntries
-const ObjectProperty = (obj) => Object.fromEntries(obj);
-/*transforma una lista de pares clave-valor en un objeto.*/
-console.log( ObjectProperty([["Mar",2],["Lu", 1]]));  
+const ObjectProperty = () => {
+    let fd = new FormData(); 
+    fd.set("Text", "Hola");
+    return fd; 
+}
+console.log(ObjectProperty())
 
+/*le permite compilar un conjunto de pares clave/valor para enviar mediante XMLHttpRequest. 
+Está cdiseñado principalmente para enviar datos de formularios, pero se puede usar independientemente 
+de los formularios para transmitir datos teleados*/
