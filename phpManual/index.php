@@ -1,24 +1,24 @@
 <?php
-   // TODO: Clases Abstractas 
+   // TODO: Interfaces
    // ? Concepto 
    /* 
-       * En PHP, una clase abstracta es una clase que no se puede instanciar directamente, sino que sirve 
-       * como una plantilla o base para otras clases. Se utiliza para definir la estructura común y los métodos 
-       * que deben implementar las clases hijas.
+      * En la programación orientada a objetos, una interfaz es una estructura que define un conjunto de 
+      * métodos que una clase debe implementar. Es un contrato que especifica qué métodos debe 
+      * proporcionar una clase sin especificar cómo se implementan esos métodos
    */
 
-    abstract class Animal {
-        abstract public function greet(); 
+    interface Inter {
+        public function fundation(); 
     }
 
-    class Dog extends Animal {
+    class Dog implements Inter{
         public function __construct() {}
 
-        public function greet() {
-            echo "Guauuu!"; 
+        public function fundation() {
+            echo "Fundation. Este"; 
         }
     }
 
     $animal = new Dog(); 
-    $animal->greet(); 
+    $animal->fundation(); 
 ?>
