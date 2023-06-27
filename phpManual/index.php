@@ -1,19 +1,27 @@
 <?php
-    // TODO: Include, require, include_once, require_once
-    
-    /*
-        * "include y include_once": permiten incluir un archivo PHP en el programa. La diferencia entre ellas es 
-        * que include puede incluir el mismo archivo varias veces mientras que include_once asegura que el 
-        * archivo solo se incluya una vez en el programa.
+   // TODO: JSON ENCODE
+   /*
+      * La función json_encode() en PHP se utiliza para convertir una estructura de datos en PHP en una 
+      * cadena JSON.
+   */
 
-        * "require y require_once": son similares a include y include_once, pero en caso de que el archivo no 
-        * pueda ser encontrado, se detendrá la ejecución del programa. Al utilizar require_once, se asegura que 
-        * el archivo solo se incluya una vez en el programa.
+   $people = [
+     "people1" => "javier",
+     "agePeople1" => 21,
+     "people2" => "Roberto",
+     "agePeople2" => 19
+   ];
 
-        - Algunos enlaces de referencia 
-         include: http://www.php.net/manual/es/function.include.php
-         include_once: http://www.php.net/manual/es/function.include-once.php
-         require: http://www.php.net/manual/es/function.require.php y
-         require_once: http://www.php.net/manual/es/function.require-once.php
-    */
+   $struct = json_encode($people); 
+   var_dump($struct); 
+
+   // TODO: JSON DECODE
+
+    /* 
+        * La función json_decode() en PHP se utiliza para convertir una cadena JSON en una estructura de 
+        * datos de PHP. Esta función toma una cadena JSON y la convierte en un objeto, un array asociativo o 
+        * un valor escalar según corresponda.
+    */   
+   $struct2 = json_decode($struct); 
+   var_dump($struct2); 
 ?>
