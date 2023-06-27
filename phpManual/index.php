@@ -1,11 +1,10 @@
 <?php
-    // variables 
-    $age = 36; 
-    $name = "Miller";
-    
-    // constantes
-    define("PI", 3.1416); 
+   // tipos de datos 
 
-    echo $name." tiene ".$age." años\n\n"; 
-    echo PI;
+   $text = "cadenas de texto";
+   $numbers = 13;
+   $floats = 13.3; 
+   $booleans = true; 
+   $arrays = [12,3,4];
+   $asociativeArrays = array ("1" => 1, "3" => 3);
 ?>
