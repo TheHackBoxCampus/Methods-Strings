@@ -39,7 +39,30 @@
 
 class Animals {
     private $fundation; // TODO: Propiedad
-    
+    /*
+        TODO: Modificadores de acceso 
+
+         ? Concepto 
+        * Los modificadores de acceso son palabras clave utilizadas en la programación orientada a objetos 
+        * para controlar la visibilidad y el acceso a los miembros (atributos y métodos) de una clase. Estos 
+        * modificadores permiten establecer qué partes del código pueden acceder y modificar dichos 
+        * miembros.
+
+        ? Tipos
+        *  public: Los miembros declarados como public son accesibles desde cualquier lugar, ya sea 
+        * desde dentro de la clase, desde las clases heredadas o desde fuera de la clase. Son visibles 
+        * para todos.
+        
+        *  private: Los miembros declarados como private solo son accesibles desde dentro de la 
+        * misma clase en la que se definen. No pueden ser accedidos desde fuera de la clase, ni 
+        * siquiera por las clases heredadas.
+        
+        *  protected: Los miembros declarados como protected son accesibles desde dentro de la 
+        * misma clase y desde las clases heredadas (subclases). Sin embargo, no pueden ser accedidos 
+        * desde fuera de la clase directamente
+    */
+
+
     public function __construct(string $name, string $age) {
         $this->name = $name;
         $this->age = $age;
