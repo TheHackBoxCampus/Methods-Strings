@@ -1,17 +1,39 @@
-# Comandos DQL 
+# Operadores Logicos 
 
 -- ? Concepto
--- * Los comandos DQL (Data Query Language) en bases de datos se utilizan para recuperar y consultar 
--- * datos de una base de datos. Estos comandos permiten realizar consultas y obtener información 
--- * específica de las tablas. Los comandos DQL más comunes so
+-- * Los operadores lógicos son palabras clave utilizadas en SQL para filtrar los resultados de una 
+-- * consulta según condiciones lógicas específicas. Los operadores lógicos básicos en SQL son:
 
-SELECT -- Recupera los datos de una o varias tablas de la base de datos, permite especificar columnas, tablas, condiciones
-       -- el resultado es un conjunto de filas que coinciden con los criterios.  
-FROM   -- La cláusula FROM se utilza en conjunto del comando SELECT para especificar las tablas de donde
-       -- se desea recuperar la información
-WHERE  -- Para filtrar registros que se desean recuperar. Permite establecer condiciones. 
-ORDER BY -- Ordena los resultados de una consulta SELECT en funcion de una o varias columnas
-         -- el ordenamiento puede ser tanto ASCENDENTE (ASC) como DESCENDENTE (DESC) 
-GROUP BY -- Agrupa filas de una consulta SELECT en conjuntos basados en los valores de una o varias columnas. 
-         -- Se utiliza en conjunto con las funciones de agregacion (SUM), (COUNT), (AVG)
-HAVING   -- Se utiliza en conjunto con GROUP BY ya que trabaja con grupos, para filtrar resultados basados en funciones de agragación 
+AND -- permite que se cumplan multiples condiciones. Si son 2, las 2 deben ser true, para que muestre los resultados 
+OR -- Este operador tambien permite que se cumplan multiples condiciones. Sin embargo si tienes 2 condiciones, 
+   -- solo 1 se necesita que se true para que muestre resultados
+NOT -- Este operadores niega la condición que sigue. Si tienes una condicion, muestra resultados
+    -- solo si esa condicion no es verdadera
+
+
+# Operadores de Comparación 
+
+-- ? Concepto 
+-- * Los operadores de comparación en SQL se utilizan para comparar dos valores. Aquí están los más
+-- * comunes
+
+= -- (Igual a) Verifica si 2 valores son iguales.
+<> o != -- (No es igual) Verifica si 2 valores NO son iguales
+> -- (Mayor que) Verifica si un valor es mayor que otro
+< -- (Menor que) Verifica si un valor es menor que otro
+>= -- (Mayor o igual) Verifica si un valor es mayor o igual que otro
+<= -- (Menor o igual) Verifica si un valor es menor o igual que otro 
+
+
+# Operador LIKE
+LIKE -- se utiliza en la cláusula WHERE para buscar patrones especificos 
+
+# Comodines 
+% -- Representa 0 o varios caracteres
+_ -- Representa cada caracter
+
+
+# Operador Between 
+BETWEEN -- se utiliza para seleccionar valores dentro de un rango determinado. 
+        -- Este rango puede ser numérico, de fecha o de texto.
+
