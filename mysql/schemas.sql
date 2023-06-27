@@ -1,45 +1,42 @@
-# tipos de datos enteros
+# Comandos DDL 
 
-# INT -> Enteros 
-# BIGINT -> Enteros grandes 
-# SMALINT -> Enteros pequeños 
-# MEDIUMINT -> Enteros medianos
-
-# La diferencia esta en el tamaño de datos que pueden entran en cada campo
-
--- -----------------------------------------------------------------------
-# tipos de datos de coma flotante
-
-# FLOAT -> Contiene un numero en coma flotante de precisión sencilla.
-# DOUBLE -> Contiene un numero en coma flotante de precisión doble. La diferencia con FLOAT es el tamaño
-# DECIMAL -> Se usan para guardar valores en los que la precisión debe ser exacta 
-
--- -----------------------------------------------------------------------
-
-# tipos de datos de tipo caracter 
-
-# CHAR -> Valores validos de 0 a 255, Cadena de caracteres de longitud constante
-# VARCHAR -> Misma longitud de valores validos, pero la cadena es variable, puede cambiar
-# BLOB -> Longitud maxima de 65.535 caracteres. Valores binarios 0 - 1
-# TEXT -> Longitud maxima de 65.535 caracteres. Sirve para almacenar texto plano sin formato. Es keySensity
-# TINYBLOB \ TINYTEXT -> Longitud maxima de 255 caracteres, la diferencia esta en el espacio 
-# MEDIUMBLOB \ MEDIUMTEXT -> Longitud maxima de 16.777.215 caracteres. 
-# LONGBLOG \ LONGTEXT -> Longitud maxima de 4.294.967.298 caracteres 
-
-# tipos de dato fecha 
-
-# DATE -> Valido para almacenar una fecha con año | mes | dia: rango entre '1000-01-01' y '9999-12-31'
-# DATETIME -> Almacena una fecha y una hora : rango entre '1000-01-01 00:00:00' y '9999-12-31 23:59:59' 
-# TIME -> Una hora: el rango esta entre '-839:59:59' y '9999-12-31 23:59:59'
-# TIMESTAM Almacena una fecha y hora UTC: con rango entre '1970-01-01 00:00:00' y algun momento del año 2037
+-- ? Concepto
+-- * Los comandos DDL (Data Definition Language) en SQL se utilizan para definir, modificar y eliminar la 
+-- * estructura de la base de datos. Estos comandos permiten crear tablas, definir restricciones, modificar 
+-- * la estructura de las tablas existentes y eliminar objetos de la base de datos
 
 
-# Modificadores o constraints
+-- ! Sintaxis de los diferentes Comandos 
 
-# AUTO_INCREMENT -> El valor se incrementa automaticamente en cada registro, una unidad.
-# DEFAULT -> Coloca un valor por defecto 
-# NOT NULL -> Impide que el campo sea nulo
-# PRIMARY KEY -> Hace que el campo se considere llave primaria
-# UNIQUE -> Datos que son unicos es decir no se repiten 
-# FOREING KEY -> Hace que el campo se considere llaves foranea
+SHOW DATABASE; -- Muestra las bases de datos que existen actualmente
+CREATE DATABASE; -- Te permite crear una base de datos
+DROP DATABASE; -- Te permite elminar una base de datos 
+USE; -- Te permite usar o seleccionar una base de datos para administrar su contenido. 
+CREATE TABLE; -- Te permite crear tablas
+SHOW TABLES; -- Te permite ver las diferentes tablas de la tabla seleccionada
+DESCRIBE; -- Visualizar la estructura de una tabla creada en la BD 
+ALTER TABLE; -- Modificar la estructura de una tabla existente en la base de datos
+ALTER TABLE nameTable ADD ; -- Añadir columnas a la tabla
+ALTER TABLE nameTable DROP COLUMN ; -- Eliminar columnas de la tabla 
+ALTER TABLE nameTable RENAME ; -- Renombrar columna de la tabla 
+ALTER TABLE nameTable MODIFY COLUMN ; -- Modificar el tipo de dato de la columna de la tabla 
+
+# Constraints
+
+-- ? Concepto 
+-- * En MySQL, los constraints (restricciones) son reglas que se aplican a las columnas de una tabla para 
+-- * mantener la integridad de los datos y asegurar que se cumplan ciertas condiciones. Estas restricciones 
+-- * definen reglas y limitaciones en los valores que se pueden insertar, actualizar o eliminar en una tabla. 
+-- * A continuación, se mencionan los tipos de constraints más comunes en MySQL:
+
+PRIMARY KEY -- Especifica al campo para que sea una llave primaria -- Datos unicos 
+FOREIGN KEY -- Especifica al campo para que sea una llave foranea -- La relacion entre 2 tablas
+UNIQUE -- Valores unicos y no repetidos -- de la columna
+NOT NULL -- Valores diferentes a nulo 
+CHECK --Valores especificos a una columna, Solo se permite ejecutar insert o update si se cumple la condicion
+
+
+# Asignar llaves primarias a una tabla con ALTER
+
+ALTER TABLE nameTable ADD CONSTRAINT PK_table PRIMARY KEY (ID)
 
