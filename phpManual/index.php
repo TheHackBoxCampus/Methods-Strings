@@ -1,24 +1,23 @@
 <?php
-   // TODO: Interfaces
+   // TODO: Autoload
    // ? Concepto 
    /* 
-      * En la programación orientada a objetos, una interfaz es una estructura que define un conjunto de 
-      * métodos que una clase debe implementar. Es un contrato que especifica qué métodos debe 
-      * proporcionar una clase sin especificar cómo se implementan esos métodos
+      * En PHP, el autoloading (carga automática) es una técnica que permite cargar automáticamente las 
+      * clases cuando son necesarias, sin tener que incluir manualmente los archivos de clase en cada punto 
+      * del código. Esto facilita el desarrollo y el mantenimiento del código, ya que no es necesario 
+      * preocuparse por incluir los archivos de clase de forma explícita
    */
 
-    interface Inter {
-        public function fundation(); 
+    function autoload($FILE) {
+        return __DIR__."/class/".$FILE."php"; 
     }
 
-    class Dog implements Inter{
-        public function __construct() {}
+    /*
+        ? Se basa en 
+        * El autoloading en PHP se basa en la función spl_autoload_register(), que permite registrar una o 
+        * varias funciones de autoload. Estas funciones se ejecutan automáticamente cuando se intenta 
+        * utilizar una clase que aún no ha sido cargada.
+    */
 
-        public function fundation() {
-            echo "Fundation. Este"; 
-        }
-    }
-
-    $animal = new Dog(); 
-    $animal->fundation(); 
+    spl_autoload_register("autoload"); 
 ?>
