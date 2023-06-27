@@ -1,8 +1,11 @@
 <?php
-    // funciones de salida en php
-    $text = "Ejemplo de una funcion de salida\n\n";
+    // variables 
+    $age = 36; 
+    $name = "Miller";
+    
+    // constantes
+    define("PI", 3.1416); 
 
-    echo $text; 
-    print_r($text); 
-    var_dump($text); 
+    echo $name." tiene ".$age." años\n\n"; 
+    echo PI;
 ?>
