@@ -1,23 +1,35 @@
 <?php
-   // TODO: Autoload
+   // TODO: Namespace
    // ? Concepto 
    /* 
-      * En PHP, el autoloading (carga automática) es una técnica que permite cargar automáticamente las 
-      * clases cuando son necesarias, sin tener que incluir manualmente los archivos de clase en cada punto 
-      * del código. Esto facilita el desarrollo y el mantenimiento del código, ya que no es necesario 
-      * preocuparse por incluir los archivos de clase de forma explícita
-   */
+    * En PHP, la palabra clave use se utiliza en la definición de espacios de nombres (namespace) para 
+    * importar clases, funciones y constantes desde otros espacios de nombres.
+    
+    * Cuando se utiliza use en la definición de un espacio de nombres, se está especificando una ruta corta 
+    * (alias) para acceder a un elemento específico de otro espacio de nombres. Por ejemplo, si se tiene 
+    * una clase MiClase definida en el espacio de nombres MiEspacioDeNombres y se quiere utilizar esa 
+    * clase en otro espacio de nombres
+   
+ */
 
-    function autoload($FILE) {
-        return __DIR__."/class/".$FILE."php"; 
+    namespace App; 
+
+    class Animals {
+        public static function getInfo() {
+            echo "info"; 
+        } 
     }
 
-    /*
-        ? Se basa en 
-        * El autoloading en PHP se basa en la función spl_autoload_register(), que permite registrar una o 
-        * varias funciones de autoload. Estas funciones se ejecutan automáticamente cuando se intenta 
-        * utilizar una clase que aún no ha sido cargada.
-    */
+     /*
+        TODO: Desde otro fichero .PHP
 
-    spl_autoload_register("autoload"); 
+        ! Puedes importar la clase animals con el abreviado
+
+        * use App\Animals; 
+
+        ! utilizar metodos y propiedades que tenga desde otro fichero
+        ! Siempre teniendo en cuenta que el autoload tiene que esta funcional.
+     */
+
+
 ?>
