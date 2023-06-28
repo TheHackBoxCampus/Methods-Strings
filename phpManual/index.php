@@ -37,7 +37,7 @@
             $dsn = "mysql:host=$this->host;dbname=$this->dbname"; 
             $pdox = new PDO($dsn, $this->user, $this->password); 
             $pdox->setAttribute(PDO::ATTRR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+            return $pdox;
             /*
                * Excepciones 
                * PDO::ERRMODE_SILENT -> Si se deja así habrá que comprobar los errores de 
