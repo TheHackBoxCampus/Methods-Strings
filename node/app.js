@@ -1,89 +1,29 @@
 /*
-    TODO: File System (fs) 
+    TODO: http (hypertext transfer protocol)
     ? Concepto
-    * El módulo fs (File System) en Node.js proporciona una amplia gama de métodos 
-    * para interactuar con el sistema de archivos del sistema operativo. A continuación, 
-    * se mencionan algunos de los métodos más utilizados del módulo fs:
+    * El módulo https en Node.js proporciona una API para realizar solicitudes HTTP 
+    * seguras (HTTPS). A continuación, se mencionan algunos de los métodos más 
+    * utilizados del módulo https
 */
 /* 
-    ? Metodos de File System
+    ? Metodos de http
 */
-import fs from "fs";
+import http from "http";
 
-let ra = fs.readFile(/*path, options, callback*/) // * lectura de archivos de forma asincrónica
-/* 
-    * path = ruta del archivo, ruta relativa.
-    * options = opciones de lectura, como la condificacion.
-    * callback = Funcion de devolucion, de llamada que recibe err y data, (contenido del archivo)
-*/
-let r = fs.readFileSync(/*path, options*/) // * lectura de archivo de forma sincrona (bloqueante)
-/* 
-    * path = ruta del archivo, ruta relativa.
-    * options = opciones de lectura, como la condificacion. Devuelve contenido del archivo.
-*/
-
-let wa = fs.writeFile(/*file, data, options, callback*/) // * escritura de archivos de forma asincrónica
-/* 
-    * path o file = ruta del archivo, ruta relativa, Donde se escribiran los datos.
-    * data = datos que se escribiran en el archivo.     
-    * options = opciones de escritura, como la condificacion.
-    * callback = Funcion de devolucion, de llamada que recibe err, (cuando se completa la escritura)
-*/
-
-
-let w = fs.writeSync(/*file, data, options*/) // * escritura de archivos de forma sincrona (bloqueante)
-/* 
-    * path o file = ruta del archivo, ruta relativa, Donde se escribiran los datos.
-    * data = datos que se escribiran en el archivo.     
-    * options = opciones de escritura, como la condificacion.
-*/
-
-let af = fs.appendFile(/* file, data, options, callback */) // * agregar al final contenido al final del archivo de manera asincrónica
+let get = http.get(/* options, callback */) // * Realiza la solicitud http get a traves de https
 /*
-    * file = ruta del archivo 
-    * data = informacion que se quiere agregar (data).
-    * options = opciones de escritura, como la condificacion.
-    * callback = funcion de devolucion, de llamada que recibe err, cuando se completa la operacion
+* options: Opciones de la solicitud, como la URL y los encabezados.
+* callback: Función de devolución de llamada que se ejecuta cuando se completa la respuesta. Recibe el objeto de respuesta.
 */
 
-let afS = fs.appendFileSync(/* file, data, options*/) // * agregar al final contenido al final del archivo de manera sincrona (bloqueante)
+let request = http.request(/* options, callback */) // *inicia una solicitud http PERSONALIZADA a traves de HTTPS
 /*
-    * file = ruta del archivo 
-    * data = informacion que se quiere agregar (data).
-    * options = opciones de escritura, como la condificacion.
-*/
-
-let rd = fs.readdir(/*path, callback*/) // * lectura de directorios de forma asincrónica 
-/*
-    * path = ruta del directorio, ruta relativa
-    * callback = function de devolucion, que recibe err y files (array de nombres de archivos en el directorio)
-*/
-
-let rdS = fs.readdirSync(/*path*/) // * lectura de directorios de forma sincrona (bloqueante)
-/*
-    * path = ruta del directorio, ruta relativa
-*/
-
-let cd = fs.mkdir(/* path, options, callback */) // * Crea un directorio de forma asincrónica
-/*
-    * path: Ruta del directorio a crear.
-    * options: Opciones para la creación del directorio
-    * callback: Función de devolución de llamada que recibe err (error) cuando se completa la creación.
+    * options: Opciones de la solicitud, como la URL, los encabezados y el método HTTP.
+    * callback: Función de devolución de llamada que se ejecuta cuando se completa la respuesta. Recibe el objeto de respuesta.
  */
 
-let cdS = fs.mkdirSync(/* path, options*/) // * Crea un directorio de forma sincrona (bloqueante)
+let server = http.createServer(/* options, requestListener */) // * crea un servidor HTTPS
 /*
-    * path: Ruta del directorio a crear.
-    * options: Opciones para la creación del directorio
- */
-
-let rmd = fs.rmdir(/*path, callback*/) // * Elimina un directorio de forma asincrónica 
-/*
-    * path: Ruta del directorio a eliminar. 
-    * callback: Función de devolución de llamada que recibe err (error) cuando se completa la eliminación.
- */
-
-let rmdS = fs.rmdirSync(/*path*/) // * Elimna un directorio de forma sincrona (bloqueante)
-/*
-    * path: Ruta del directorio a eliminar. 
+    * options: Opciones para la creación del servidor, como el certificado y la clave privada
+    * requestListener: Función que se ejecuta cuando se recibe una solicitud en el servidor
 */
