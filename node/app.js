@@ -1,29 +1,27 @@
 /*
-    TODO: http (hypertext transfer protocol)
+    TODO: http Request (hypertext transfer protocol)
     ? Concepto
-    * El módulo https en Node.js proporciona una API para realizar solicitudes HTTP 
-    * seguras (HTTPS). A continuación, se mencionan algunos de los métodos más 
-    * utilizados del módulo https
+    * En Node.js, el objeto request (solicitud) es un objeto proporcionado por el módulo 
+    * http o https que representa la solicitud HTTP recibida por el servidor. Proporciona 
+    * información sobre la solicitud realizada por el cliente, como la URL, los 
+    * encabezados, los parámetros de consulta y el cuerpo de la solicitud.
+
 */
 /* 
-    ? Metodos de http
-*/
-import http from "http";
-
-let get = http.get(/* options, callback */) // * Realiza la solicitud http get a traves de https
-/*
-* options: Opciones de la solicitud, como la URL y los encabezados.
-* callback: Función de devolución de llamada que se ejecuta cuando se completa la respuesta. Recibe el objeto de respuesta.
+    ? Metodos de http Request
 */
 
-let request = http.request(/* options, callback */) // *inicia una solicitud http PERSONALIZADA a traves de HTTPS
-/*
-    * options: Opciones de la solicitud, como la URL, los encabezados y el método HTTP.
-    * callback: Función de devolución de llamada que se ejecuta cuando se completa la respuesta. Recibe el objeto de respuesta.
- */
+import { createServer } from "http";
 
-let server = http.createServer(/* options, requestListener */) // * crea un servidor HTTPS
-/*
-    * options: Opciones para la creación del servidor, como el certificado y la clave privada
-    * requestListener: Función que se ejecuta cuando se recibe una solicitud en el servidor
-*/
+let server = createServer((req, res) => {
+    /*
+        * req.url: La URL de la solicitud.
+        * req.method: El método HTTP utilizado en la solicitud (GET, POST, etc.).
+        * req.headers: Un objeto que contiene los encabezados de la solicitud.
+        * req.params: Los parámetros de ruta si estás utilizando un enrutador.
+        * req.query: Los parámetros de consulta si están presentes en la URL.
+        * req.body: El cuerpo de la solicitud (datos enviados en una solicitud POST o PUT)
+    */
+})
+
+
