@@ -1,58 +1,72 @@
 /*
-    TODO: Dotenv()
+    TODO: mysql2
     ? Concepto
-    * Las variables de entorno en Node.js son variables específicas del entorno en el 
-    * que se ejecuta una aplicación. Son valores que se pueden configurar 
-    * externamente al código y se utilizan para almacenar información sensible, 
-    * configuraciones personalizadas u otros datos relevantes para la aplicación.
-    * En Node.js, las variables de entorno se pueden acceder utilizando el objeto 
-    * process.env. Este objeto proporciona acceso a todas las variables de entorno 
-    * definidas en el sistema operativo donde se está ejecutando la aplicación.
+    * mysql2 es un paquete de Node.js que proporciona una interfaz para interactuar 
+    * con bases de datos MySQL. Es una biblioteca de cliente MySQL para Node.js que 
+    * se basa en el paquete mysql original pero con varias mejoras y optimizaciones.
+    * mysql2 ofrece un rendimiento superior en comparación con mysql, especialmente 
+    * en escenarios con altas cargas de trabajo y consultas concurrentes. Utiliza la 
+    * biblioteca C++ libmysqlclient para comunicarse directamente con el servidor 
+    * MySQL, lo que permite una mayor eficiencia y velocidad.
 */
 
 /*
     ? Caracteristicas
-
-    * Configuración de la aplicación: Puedes utilizar variables de entorno para 
-    * almacenar valores de configuración, como credenciales de bases de datos, claves 
-    * de API, URL de servicios externos, etc. Esto permite mantener esta información 
-    * sensible separada del código fuente y facilita la configuración de la aplicación en 
-    * diferentes entornos (desarrollo, producción, pruebas, etc.).
+    * Rendimiento mejorado: mysql2 ha sido diseñado para proporcionar un 
+    * rendimiento superior y un menor uso de recursos en comparación con mysql. Esto 
+    * se logra mediante el uso de conexiones de socket TCP/IP más eficientes y un 
+    * mejor manejo de la memoria.
     
-    * Parámetros personalizables: Puedes utilizar variables de entorno para permitir la 
-    * personalización de ciertos comportamientos de la aplicación. Por ejemplo, podrías 
-    * tener una variable de entorno que determine el número de elementos a mostrar 
-    * por página en una paginación, o el idioma predeterminado a utilizar.
+    * Soporte para consultas preparadas: mysql2 permite utilizar consultas 
+    * preparadas, lo que puede mejorar la seguridad y el rendimiento al ejecutar 
+    * consultas repetidas con diferentes parámetros.
     
-    * Depuración y registro: Las variables de entorno también pueden ser útiles para 
-    * habilitar o deshabilitar la depuración o el registro de la aplicación en función de la 
-    * configuración del entorno. Esto permite tener un mayor control sobre los mensajes 
-    * de registro o habilitar características adicionales de depuración en entornos de 
-    * desarrollo o pruebas
+    * Manejo de resultados de consultas mejorado: mysql2 proporciona un manejo 
+    * mejorado de los resultados de las consultas, lo que permite un procesamiento más 
+    * eficiente de grandes conjuntos de resultados.
+   
+    * Compatibilidad con las últimas características de MySQL: mysql2 se mantiene 
+    * actualizado con las últimas características y mejoras introducidas en MySQL.
+    
+    * Streams: mysql2 admite el uso de streams para la recuperación de resultados de 
+    * consultas grandes. Esto significa que puedes leer y procesar los resultados en 
+    * tiempo real a medida que se recuperan del servidor de MySQL, en lugar de 
+    * esperar a que se complete toda la consulta.
+    
+    * Compatibilidad con promesas: A diferencia de mysql, mysql2 proporciona una 
+    * API basada en promesas, lo que facilita el manejo de consultas asincrónicas y 
+    * mejora la legibilidad del código
 */
+
+// TODO: archivo conexion.js
+import mysql from "mysql2";
+
+// crea la conexion
+let con = mysql.createPool({
+    host: "...",
+    user: "...",
+    password: "...",
+    database: "..."
+})
+
+export default con 
+
 
 /*
-    ? uso
-    * Instalas la libreria con npm 
-    * creas el archivo .env y defines las variables
-    * importas los paquetes
-    * cargas las variables en el archivo con el metodo @config()
-    * utilizas las variables definidas en el archivo .env
+    TODO: archivo router.js
 */
+// supongamos que la configuracion de los middleware y express ya esta hecha
+import co from "../database/conexion.js"
 
-// TODO: archivo app.js
-// * importar
-import dotenv from "dotenv"
-// * cargar
-dotenv.config();
-// * utlizar
-let vars = process.env.config(); 
-
-
-// TODO: archivo .env
+// dentro del metodo GET, POST ...
+con.query(/* query, data?, middleware?, callback*/)
 /*
-    config= {...properties}
+    * query = consulta sql que se quiere hacer
+    * data = parametro opcional, en caso de que la consulta necesite datos
+    * middleware = si tienes dto puedes configurar los middleware para validacion de data
+    * callback = proporciona funcion de devolucion, que tiene err, cuando termina la consulta 
 */
+
 
 
 
