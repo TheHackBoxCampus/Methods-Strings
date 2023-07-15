@@ -1,72 +1,53 @@
 /*
-    TODO: mysql2
+    TODO: nanoID
     ? Concepto
-    * mysql2 es un paquete de Node.js que proporciona una interfaz para interactuar 
-    * con bases de datos MySQL. Es una biblioteca de cliente MySQL para Node.js que 
-    * se basa en el paquete mysql original pero con varias mejoras y optimizaciones.
-    * mysql2 ofrece un rendimiento superior en comparación con mysql, especialmente 
-    * en escenarios con altas cargas de trabajo y consultas concurrentes. Utiliza la 
-    * biblioteca C++ libmysqlclient para comunicarse directamente con el servidor 
-    * MySQL, lo que permite una mayor eficiencia y velocidad.
+    * NanoID es una biblioteca de generación de identificadores únicos y aleatorios en 
+    * Node.js. Proporciona una forma sencilla de generar identificadores únicos que 
+    * pueden ser utilizados, por ejemplo, como claves primarias en bases de datos, 
+    * identificadores de objetos, tokens de autenticación, entre otros casos de uso.
+    
+    * La biblioteca NanoID está diseñada para ser rápida, compacta y segura, 
+    * generando identificadores únicos de forma eficiente. Utiliza una combinación de 
+    * caracteres alfanuméricos y se puede configurar para generar identificadores con 
+    * diferentes longitudes y utilizando diferentes alfabetos
 */
 
 /*
     ? Caracteristicas
-    * Rendimiento mejorado: mysql2 ha sido diseñado para proporcionar un 
-    * rendimiento superior y un menor uso de recursos en comparación con mysql. Esto 
-    * se logra mediante el uso de conexiones de socket TCP/IP más eficientes y un 
-    * mejor manejo de la memoria.
+    * Generación de identificadores únicos: NanoID está diseñado específicamente 
+    * para generar identificadores únicos de manera eficiente. Utiliza algoritmos 
+    * criptográficamente seguros para garantizar que los identificadores generados sean 
+    * altamente improbables de repetirse.
     
-    * Soporte para consultas preparadas: mysql2 permite utilizar consultas 
-    * preparadas, lo que puede mejorar la seguridad y el rendimiento al ejecutar 
-    * consultas repetidas con diferentes parámetros.
+    * Tamaño configurable: Puedes especificar la longitud deseada del identificador 
+    * generado mediante el parámetro de longitud de la función nanoid(). Esto te 
+    * permite ajustar el tamaño del identificador según tus necesidades específicas.
     
-    * Manejo de resultados de consultas mejorado: mysql2 proporciona un manejo 
-    * mejorado de los resultados de las consultas, lo que permite un procesamiento más 
-    * eficiente de grandes conjuntos de resultados.
-   
-    * Compatibilidad con las últimas características de MySQL: mysql2 se mantiene 
-    * actualizado con las últimas características y mejoras introducidas en MySQL.
+    * Alfabeto personalizable: NanoID utiliza un conjunto de caracteres alfanuméricos
+    * por defecto (a-z, A-Z y 0-9). Sin embargo, también puedes personalizar el alfabeto 
+    * utilizado para generar los identificadores. Esto te permite, por ejemplo, utilizar solo 
+    * caracteres en minúscula o añadir caracteres adicionales según tus preferencias.
     
-    * Streams: mysql2 admite el uso de streams para la recuperación de resultados de 
-    * consultas grandes. Esto significa que puedes leer y procesar los resultados en 
-    * tiempo real a medida que se recuperan del servidor de MySQL, en lugar de 
-    * esperar a que se complete toda la consulta.
+    * Rendimiento eficiente: NanoID está diseñado para ser rápido y eficiente en 
+    * términos de rendimiento. Los algoritmos utilizados se optimizan para generar 
+    * identificadores únicos de manera rápida, lo que es especialmente importante 
+    * cuando se necesitan generar grandes cantidades de identificadores en poco 
+    * tiempo.
     
-    * Compatibilidad con promesas: A diferencia de mysql, mysql2 proporciona una 
-    * API basada en promesas, lo que facilita el manejo de consultas asincrónicas y 
-    * mejora la legibilidad del código
+    * Tamaño compacto: La biblioteca NanoID es relativamente pequeña y liviana, lo 
+    * que significa que no añade una carga significativa a tus aplicaciones Node.js. Esto 
+    * es especialmente beneficioso si estás trabajando en entornos con restricciones de 
+    * recursos
 */
 
-// TODO: archivo conexion.js
-import mysql from "mysql2";
-
-// crea la conexion
-let con = mysql.createPool({
-    host: "...",
-    user: "...",
-    password: "...",
-    database: "..."
-})
-
-export default con 
-
+import { nanoid } from "nanoid"; 
 
 /*
-    TODO: archivo router.js
-*/
-// supongamos que la configuracion de los middleware y express ya esta hecha
-import co from "../database/conexion.js"
-
-// dentro del metodo GET, POST ...
-con.query(/* query, data?, middleware?, callback*/)
-/*
-    * query = consulta sql que se quiere hacer
-    * data = parametro opcional, en caso de que la consulta necesite datos
-    * middleware = si tienes dto puedes configurar los middleware para validacion de data
-    * callback = proporciona funcion de devolucion, que tiene err, cuando termina la consulta 
+    ? genera un hast de 21 caracteres
+    * @var {nanoid(10)} * su deseas mas o menos}
 */
 
+const id = nanoid(); // id aleatoria
 
 
 
